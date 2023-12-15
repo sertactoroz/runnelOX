@@ -8516,6 +8516,7 @@ textarea.form-control-lg {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    padding-left: 15rem !important;
     z-index: 1020;
   }
   .sticky-lg-bottom {
@@ -16282,6 +16283,7 @@ Navbar
 }
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-collapse {
+    
     width: auto;
     flex: 1 1 auto;
   }
@@ -16593,7 +16595,7 @@ Navbar brand
 }
 
 .navbar-brand-image {
-  height: 2rem;
+  height: 3rem;
   width: auto;
 }
 
@@ -16932,7 +16934,7 @@ Navbar vertical
     top: 0;
     left: 0;
     bottom: 0;
-    z-index: 1030;
+    z-index: 0;
     align-items: flex-start;
     transition: transform 0.3s;
     overflow-y: scroll;
