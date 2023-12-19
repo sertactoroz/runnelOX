@@ -1,5 +1,5 @@
    <!-- Sidebar -->
-   <aside class="navbar navbar-vertical navbar-expand-lg" style="z-index: 0;" data-bs-theme="dark">
+   <aside class="navbar navbar-vertical navbar-expand-lg" style="z-index:0; margin-top:8rem" data-bs-theme="dark">
        <div class="container-fluid">
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-menu" aria-controls="sidebar-menu" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
@@ -179,7 +179,7 @@
                    </div>
                </div>
            </div>
-           <div class="collapse navbar-collapse pt-lg-7 id=" sidebar-menu">
+           <div class="collapse navbar-collapse" id="sidebar-menu">
                <ul class="navbar-nav pt-lg-3">
                    <li class="nav-item">
                        <a class="nav-link" href="./">

@@ -9,7 +9,7 @@
               <!-- NAVBAR - BRAND-->
               <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3 ps-lg-7 pt-0 pb-0">
                   <a href=".">
-                      <img src="static/logoicon.png" width="4rem" height="4rem" alt="logo" class="navbar-brand-image">
+                      <img src="./static/logoicon.png" width="4rem" height="4rem" alt="Tabler" class="navbar-brand-image">
                   </a>
               </h1>
               <!-- NAVBAR - SEARCH-->
