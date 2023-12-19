@@ -1,8 +1,8 @@
 <?php
 $servername = "185.241.138.92";
-$username = "user_auction";
+$username = "ngi2024";
 $password = "Fx7mz458%";
-$dbname = "auction.ncteknoloji.com";
+$dbname = "admin_arkzero";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
