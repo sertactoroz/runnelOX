@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
-    const signupButton = $("#account-btn");
-    const checkbox = $("#checkbox-policy");
+    const signupButton = $("signupbutton");
+    const checkbox = $("#checkbox");
     const password = $("#password");
 
     function checkpwd() {
@@ -37,7 +37,7 @@ $(document).ready(function () {
 
         if (allConditionsMet) {
             let formData = {
-                fullname: $("#fullname").val(),
+                fullname: $("#name").val(),
                 email: $("#email").val(),
                 password: $("#password").val(),
 
@@ -45,7 +45,7 @@ $(document).ready(function () {
 
             $.ajax({
                 type: "POST",
-                url: "api/signup_api.php",
+                url: "api/signup.php",
                 data: formData,
                 dataType: 'json',
                 encode: false,
@@ -62,10 +62,10 @@ $(document).ready(function () {
                     console.log('data', data);
                     $('#signup-response-message').html('<div class="valid">' + data.message + '</div>');
 
-                    setTimeout(function () {
-                        window.location.href = "index.php?p=dashboard";
+                    // setTimeout(function () {
+                    //     window.location.href = "index.php?p=dashboard";
 
-                    }, 1000);
+                    // }, 1000);
                 } else {
                     $('#signup-response-message').html('<div class="alert alert-fail">' + data.message + "</div>");
                 }
@@ -80,7 +80,7 @@ $(document).ready(function () {
     // Set initial values and check password on page load
 
     mail = Math.floor(Math.random() * 10000000000);
-    $("#fullname").val("test testoglu");
+    $("#name").val("test testoglu");
     $("#email").val(mail + "test@test.com");
     $("#password").val("1234Abcd");
     checkpwd();
