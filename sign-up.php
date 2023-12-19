@@ -32,20 +32,19 @@
             font-feature-settings: "cv03", "cv04", "cv11";
         }
     </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body class=" d-flex flex-column">
     <script src="./dist/js/demo-theme.min.js?1684106062"></script>
     <div class="page page-center">
-        <img id="background-image" src="static/ark0-bg.png"></img>
+        <img id="background-image" src="./static/ark0-bg.png"></img>
         <div class="container container-tight py-4">
             <div class="text-center mb-4">
                 <a href="." class="navbar-brand navbar-brand-autodark">
                     <img src="./static/logo.svg" height="36" alt="">
                 </a>
             </div>
-            <form class="card card-md" action="./" method="get" autocomplete="off" novalidate>
+            <form class="card card-md" action="" method="post" autocomplete="off" novalidate>
                 <div class="card-body">
                     <h2 class="card-title text-center mb-4">Create new account</h2>
                     <div class="mb-3">
@@ -55,6 +54,14 @@
                     <div class="mb-3">
                         <label class="form-label">Email address</label>
                         <input id="email" type="email" class="form-control" placeholder="Enter email">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Mobile</label>
+                        <input id="mobile" type="tel" class="form-control" placeholder="Enter mobile" pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Birth Date</label>
+                        <input id="birthdate" type="date" class="form-control">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Password</label>
@@ -81,6 +88,10 @@
                             </span>
                         </label>
                     </div>
+                    <div class="mb-3">
+                        <span class="form-check-label" id="signup-response-message">
+                        </span>
+                    </div>
                     <div class="form-footer">
                         <button id="signupbutton" type="button" class="btn btn-primary w-100">Create new account</button>
                     </div>
@@ -96,6 +107,7 @@
     <!-- Tabler Core -->
     <script src="./dist/js/tabler.min.js?1684106062" defer></script>
     <script src="./dist/js/demo.min.js?1684106062" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./dist/js/signup.js" defer></script>
 </body>
 

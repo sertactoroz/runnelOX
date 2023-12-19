@@ -1,8 +1,10 @@
 
 $(document).ready(function () {
-    const signupButton = $("signupbutton");
+    const signupButton = $("#signupbutton");
     const checkbox = $("#checkbox");
     const password = $("#password");
+    const mobile = $("#mobile");
+    const birthdate = $("#birthdate");
 
     function checkpwd() {
         let validLength = password.val().length >= 8;
@@ -30,19 +32,18 @@ $(document).ready(function () {
     });
 
     signupButton.click(function (event) {
+        console.log('button clicked')
         event.preventDefault();
-
         let checkboxClicked = checkbox.prop('checked');
         let allConditionsMet = password.val().length >= 8 && checkboxClicked;
-
         if (allConditionsMet) {
             let formData = {
                 fullname: $("#name").val(),
                 email: $("#email").val(),
                 password: $("#password").val(),
-
+                mobile: $("#mobile").val(),
+                birthdate: $("#birthdate").val(),
             };
-
             $.ajax({
                 type: "POST",
                 url: "api/signup.php",
@@ -58,14 +59,11 @@ $(document).ready(function () {
                     sessionStorage.setItem("name", formData.fullname);
                     sessionStorage.setItem("email", formData.email);
                     sessionStorage.setItem("userid", data.userGuid);
-
                     console.log('data', data);
                     $('#signup-response-message').html('<div class="valid">' + data.message + '</div>');
-
-                    // setTimeout(function () {
-                    //     window.location.href = "index.php?p=dashboard";
-
-                    // }, 1000);
+                    setTimeout(function () {
+                        window.location.href = "index.php?p=dashboard";
+                    }, 1000);
                 } else {
                     $('#signup-response-message').html('<div class="alert alert-fail">' + data.message + "</div>");
                 }
@@ -80,8 +78,10 @@ $(document).ready(function () {
     // Set initial values and check password on page load
 
     mail = Math.floor(Math.random() * 10000000000);
-    $("#name").val("test testoglu");
+    $("#name").val("Name Surname");
     $("#email").val(mail + "test@test.com");
     $("#password").val("1234Abcd");
+    $("#mobile").val("5325555555");
+    $("#birthdate").val("1989-06-20");
     checkpwd();
 });

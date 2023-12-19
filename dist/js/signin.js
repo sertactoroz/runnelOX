@@ -2,7 +2,7 @@ $(document).ready(function () {
     var referrer = document.referrer;
     console.log(referrer);
 
-    $("#account-btn").click(function (event) {
+    $("#signinbutton").click(function (event) {
         $("#signin-response-message").html('<div class="valid">Logging you in...</div>');
 
         let formData = {
@@ -14,7 +14,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "api/login_api.php",
+            url: "api/signin.php",
             data: formData,
             dataType: 'json',
             encode: false,
@@ -67,7 +67,6 @@ $(document).ready(function () {
     });
 
     // Set default values for testing
-    $("#email").val("msertactoroz@test.com");
+    $("#email").val("tester@test.com");
     $("#password").val("1234Abcd");
-
 });

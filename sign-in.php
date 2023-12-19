@@ -37,20 +37,20 @@
 <body class=" d-flex flex-column">
     <script src="./dist/js/demo-theme.min.js?1684106062"></script>
     <div class="page page-center">
-        <img id="background-image" src="static/ark0-bg.png"></img>
+        <img id="background-image" src="./static/ark0-bg.png"></img>
         <div class="container container-tight py-4">
             <div class="text-center mb-4">
                 <a href="." class="navbar-brand navbar-brand-autodark">
-                    <img src="./static/logo.svg" height="55" alt="">
+                    <img src="static/logo.svg" height="55" alt="">
                 </a>
             </div>
             <div class="card card-md">
                 <div class="card-body rounded">
                     <h2 class="h2 text-center mb-4">Login to your account</h2>
-                    <form action="./" method="get" autocomplete="off" novalidate>
+                    <form action="" method="post" autocomplete="off" novalidate>
                         <div class="mb-3">
                             <label class="form-label">Email address</label>
-                            <input type="email" class="form-control" placeholder="your@email.com" autocomplete="off">
+                            <input id="email" type="email" class="form-control" placeholder="your@email.com" autocomplete="off">
                         </div>
                         <div class="mb-2">
                             <label class="form-label">
@@ -60,7 +60,7 @@
                                 </span>
                             </label>
                             <div class="input-group input-group-flat">
-                                <input type="password" class="form-control" placeholder="Your password" autocomplete="off">
+                                <input id="password" type="password" class="form-control" placeholder="Your password" autocomplete="off">
                                 <span class="input-group-text">
                                     <a href="#" class="link-secondary" title="Show password" data-bs-toggle="tooltip">
                                         <!-- Download SVG icon from http://tabler-icons.io/i/eye -->
@@ -75,12 +75,16 @@
                         </div>
                         <div class="mb-2">
                             <label class="form-check">
-                                <input type="checkbox" class="form-check-input">
+                                <input id="rememberme" type="checkbox" class="form-check-input">
                                 <span class="form-check-label">Remember me on this device</span>
                             </label>
                         </div>
+                        <div class="mb-3">
+                            <span class="form-check-label" id="signin-response-message">
+                            </span>
+                        </div>
                         <div class="form-footer">
-                            <button type="submit" class="btn btn-primary w-100">Sign in</button>
+                            <button id="signinbutton" type="submit" class="btn btn-primary w-100">Sign in</button>
                         </div>
                     </form>
                 </div>
@@ -114,12 +118,15 @@
                 Don't have account yet?
                 <a href="./sign-up.php" tabindex="-1">Sign up</a>
             </div>
+
         </div>
     </div>
     <!-- Libs JS -->
     <!-- Tabler Core -->
     <script src="./dist/js/tabler.min.js?1684106062" defer></script>
     <script src="./dist/js/demo.min.js?1684106062" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./dist/js/signin.js" defer></script>
 </body>
 
 </html>
