@@ -13,7 +13,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign in - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.</title>
+
+    <title>ArkZero</title>
     <!-- CSS files -->
     <link href="./dist/css/tabler.min.css?1684106062" rel="stylesheet">
     <link href="./dist/css/tabler-flags.min.css?1684106062" rel="stylesheet">
@@ -37,7 +38,7 @@
 <body class=" d-flex flex-column">
     <script src="./dist/js/demo-theme.min.js?1684106062"></script>
     <div class="page page-center ">
-        <img id="background-image" src="./static/ark0-bg.png"></img>
+        <img id="background-image" src="static/ark0-bg.png"></img>
         <div class="container container-tight py-4">
             <div class="text-center mb-4">
                 <a href="." class="navbar-brand navbar-brand-autodark">
@@ -90,36 +91,29 @@
                     </form>
                 </div>
                 <div class="hr-text">or</div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <a href="#" class="btn w-100" onclick="signInWithGoogle()">
-                                <!-- Use the official Google Sign-In icon -->
-                                <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Sign-In" width="24" height="24">
-                                Login with Google
-                            </a>
+                <div class="card-body justify-content-center px-auto mx-auto">
+                    <div class="row ">
+                        <script src="https://accounts.google.com/gsi/client" async defer></script>
+                        <div id="g_id_onload" class="mx-auto px-auto d-flex" data-client_id="374376529924-18lmebbp7gig99icthjqakcevv0rhtj8.apps.googleusercontent.com" data-callback="handleCredentialResponse">
                         </div>
-                        <div class="col">
-                            <a href="#" class="btn w-100" onclick="signInWithX()">
-                                <!-- Placeholder "X" icon -->
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="18" y1="6" x2="6" y2="18" />
-                                    <line x1="6" y1="6" x2="18" y2="18" />
-                                </svg>
-                                Login with X
-                            </a>
-                        </div>
+                        <div class="g_id_signin w-100" data-type="standard"></div>
                     </div>
                 </div>
+                <div class="hr my-0"></div>
+                <div class=" text-center text-muted my-3">
+                    Don't have account yet?
+                    <a href="./sign-up.php" tabindex="-1">Sign up</a>
+                </div>
             </div>
-            <div class="text-center text-muted mt-3">
-                Don't have account yet?
-                <a href="./sign-up.php" tabindex="-1">Sign up</a>
-            </div>
+
+
 
         </div>
     </div>
 
+
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
@@ -155,6 +149,38 @@
                 }
             });
         });
+    </script>
+
+    <script>
+        window.handleCredentialResponse = (response) => {
+            // decodeJwtResponse() is a custom function defined by you
+            // to decode the credential response.
+            responsePayload = decodeJwtResponse(response.credential);
+
+            console.log("ID: " + responsePayload.sub);
+            console.log('Full Name: ' + responsePayload.name);
+            console.log('Given Name: ' + responsePayload.given_name);
+            console.log('Family Name: ' + responsePayload.family_name);
+            console.log("Image URL: " + responsePayload.picture);
+            console.log("Email: " + responsePayload.email);
+        }
+    </script>
+    <script>
+        function decodeJwtResponse(token) {
+            // console.log('token'token)
+            var base64Url = token.split(".")[1];
+            var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+            var jsonPayload = decodeURIComponent(
+                atob(base64)
+                .split("")
+                .map(function(c) {
+                    return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+                })
+                .join("")
+            );
+
+            return JSON.parse(jsonPayload);
+        }
     </script>
 
     <!-- Libs JS -->

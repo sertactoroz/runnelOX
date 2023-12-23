@@ -68,7 +68,7 @@
                         <div class="input-group input-group-flat">
                             <input id="password" type="password" class="form-control" placeholder="Password" autocomplete="off">
                             <span class="input-group-text">
-                                <a href="#" class="link-secondary" title="Show password" data-bs-toggle="tooltip">
+                                <a href="#" class="link-secondary" title="Show password" id="togglePassword" data-bs-toggle="tooltip">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                         <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
@@ -96,19 +96,56 @@
                         <button id="signupbutton" type="button" class="btn btn-primary w-100">Create new account</button>
                     </div>
                 </div>
+                <div class="hr my-0"></div>
+                <div class="text-center text-muted my-3">
+                    Already have account?
+                    <a href="./sign-in.php" tabindex="-1">Sign in</a>
+                </div>
             </form>
-            <div class="text-center text-muted mt-3">
-                Already have account?
-                <a href="./sign-in.php" tabindex="-1">Sign in</a>
-            </div>
+
+
         </div>
     </div>
+
+
     <!-- Libs JS -->
+
     <!-- Tabler Core -->
     <script src="./dist/js/tabler.min.js?1684106062" defer></script>
     <script src="./dist/js/demo.min.js?1684106062" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./dist/js/signup.js" defer></script>
+    <!-- Toggle  JS -->
+    <script>
+        $(document).ready(function() {
+            // Initialize tooltips
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            });
+
+            // Toggle password visibility
+            $("#togglePassword").click(function() {
+                var passwordField = $("#password");
+                var type = passwordField.attr("type");
+
+                // Toggle the password field type
+                if (type === "password") {
+                    passwordField.attr("type", "text");
+                } else {
+                    passwordField.attr("type", "password");
+                }
+
+                // Toggle the eye icon (SVG) based on the password field type
+                var eyeIcon = $("#togglePassword").find("svg");
+                if (type === "password") {
+                    eyeIcon.find("path").attr("d", "M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0");
+                } else {
+                    eyeIcon.find("path").attr("d", "M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6");
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
