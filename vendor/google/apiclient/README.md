@@ -413,7 +413,7 @@ use GuzzleHttp\Client;
 
 $httpClient = new Client([
     'headers' => [
-        'referer' => 'mysite.com'
+        'referer' => '.com'
     ]
 ]);
 
