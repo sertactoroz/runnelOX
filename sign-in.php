@@ -163,6 +163,31 @@
             console.log('Family Name: ' + responsePayload.family_name);
             console.log("Image URL: " + responsePayload.picture);
             console.log("Email: " + responsePayload.email);
+
+            localStorage.setItem("name", responsePayload.name);
+            localStorage.setItem("email", responsePayload.email);
+            localStorage.setItem("userid", responsePayload.sub);
+            localStorage.setItem("userpicture", responsePayload.picture)
+
+            // sessionStorage.setItem("name", responsePayload.name);
+            // sessionStorage.setItem("email", responsePayload.email);
+            // sessionStorage.setItem("userid", responsePayload.sub);
+            // sessionStorage.setItem("userpicture", responsePayload.picture)
+
+
+            setTimeout(function() {
+                // if (referrer != null) {
+                //     window.location.href = referrer;
+                //     // console.log('Referer page exists');
+                // } else {
+
+                // }
+                console.log('Referer page does not exist');
+                window.location.href = "index.php";
+                // Redirect to your default page if no referrer is available
+                // window.location.href = "index.php?p=dashboard";
+            }, 1000);
+
         }
     </script>
     <script>

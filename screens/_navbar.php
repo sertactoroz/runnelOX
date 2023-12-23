@@ -178,9 +178,9 @@
                   </div>
                   <div class="nav-item dropdown px-4">
                       <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
-                          <span class="avatar avatar-md " style=" border-radius: 50%; background-image: url(./static/avatars/000m.jpg)"></span>
+                          <span id="profilepicture" class="avatar avatar-md " style=" border-radius: 50%; background-image: url(./static/avatars/default.png)"></span>
                           <div class="d-none d-xl-block ps-2">
-                              <div id="username">Test Test</div>
+                              <div id="profilename">Test Test</div>
                               <div class="mt-1 small text-muted">UI Designer</div>
                           </div>
                       </a>
@@ -672,5 +672,6 @@
               </div>
           </div>
       </header>
-
   </div>
+
+  <script src="dist/js/profileinfo.js" defer></script>
