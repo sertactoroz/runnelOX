@@ -92,12 +92,17 @@
                 </div>
                 <div class="hr-text">or</div>
                 <div class="card-body justify-content-center px-auto mx-auto">
-                    <div class="row ">
+                    <div class="">
                         <script src="https://accounts.google.com/gsi/client" async defer></script>
                         <div id="g_id_onload" class="mx-auto px-auto d-flex" data-client_id="374376529924-18lmebbp7gig99icthjqakcevv0rhtj8.apps.googleusercontent.com" data-callback="handleCredentialResponse">
                         </div>
                         <div class="g_id_signin w-100" data-type="standard"></div>
                     </div>
+                    <!-- <div class="py-2 my-2">
+                        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                        </fb:login-button>
+                    </div> -->
+
                 </div>
                 <div class="hr my-0"></div>
                 <div class=" text-center text-muted my-3">
@@ -111,7 +116,39 @@
         </div>
     </div>
 
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '{1072524500557417}',
+                cookie: true,
+                xfbml: true,
+                version: 'v2.8'
+            });
 
+            FB.AppEvents.logPageView();
+
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+
+            function checkLoginState() {
+                FB.getLoginStatus(function(response) {
+                    statusChangeCallback(response);
+                });
+            }
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 

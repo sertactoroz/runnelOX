@@ -14,7 +14,7 @@
               </h1>
               <!-- NAVBAR - SEARCH-->
 
-              <div class="col-lg-4 my-2 my-md-0 flex-grow-1 flex-md-grow order-first order-md-last px-lg-8">
+              <!-- <div class="col-lg-4 my-2 my-md-0 flex-grow-1 flex-md-grow order-first order-md-last px-lg-8">
                   <form action="./" method="get" autocomplete="off" novalidate>
                       <div class="input-icon">
                           <span class="input-icon-addon">
@@ -27,7 +27,7 @@
                           <input style="font-size:medium;" type="text" value="" class="form-control" placeholder="Search…" aria-label="Search in website">
                       </div>
                   </form>
-              </div>
+              </div> -->
               <!-- NAVBAR - UPRIGHT-->
 
               <div class="navbar-nav flex-row order-md-last">
@@ -178,9 +178,9 @@
                   </div>
                   <div class="nav-item dropdown px-4">
                       <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
-                          <span id="profilepicture" class="avatar avatar-md " style=" border-radius: 50%; background-image: url(./static/avatars/default.png)"></span>
+                          <span id="profilepicture" class="avatar avatar-sm " style=" border-radius: 50%; background-image: url(./static/avatars/default.png)"></span>
                           <div class="d-none d-xl-block ps-2">
-                              <div id="profilename">Test Test</div>
+                              <div id="profilename">Name Surname</div>
                               <div class="mt-1 small text-muted">UI Designer</div>
                           </div>
                       </a>
@@ -202,7 +202,7 @@
               <div class="navbar">
                   <div class="container-xl">
                       <!-- NAVBAR - PAGE HEADER-->
-                      <div class="col-lg-2 page-header d-print-none text-white px-lg-4 bg-dark py-1">
+                      <div class="col-lg-3 page-header d-print-none text-white px-lg-4 bg-dark py-1">
                           <div class="container-xl">
                               <div class="row g-2 align-items-center">
                                   <div class="col">
@@ -217,8 +217,9 @@
                               </div>
                           </div>
                       </div>
+
                       <!-- NAVBAR - MENU -->
-                      <div class="col-lg-10">
+                      <div class="col-lg-5">
                           <ul class="navbar-nav">
 
                               <li class="nav-item">
@@ -547,9 +548,8 @@
                                   </div>
                               </li>
                               <li class="nav-item active dropdown">
-                                  <a class="nav-link dropdown-toggle" href="#navbar-layout" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                  <!-- <a class="nav-link dropdown-toggle" href="#navbar-layout" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false">
                                       <span class="nav-link-icon d-md-none d-lg-inline-block">
-                                          <!-- Download SVG icon from http://tabler-icons.io/i/layout-2 -->
                                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                               <path d="M4 4m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v1a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
@@ -561,7 +561,7 @@
                                       <span class="nav-link-title">
                                           Layout
                                       </span>
-                                  </a>
+                                  </a> -->
                                   <div class="dropdown-menu">
                                       <div class="dropdown-menu-columns">
                                           <div class="dropdown-menu-column">
@@ -611,10 +611,9 @@
                                       </div>
                                   </div>
                               </li>
-                              <li class="nav-item">
+                              <!-- <li class="nav-item">
                                   <a class="nav-link" href="./icons.html">
                                       <span class="nav-link-icon d-md-none d-lg-inline-block">
-                                          <!-- Download SVG icon from http://tabler-icons.io/i/ghost -->
                                           <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                               <path d="M5 11a7 7 0 0 1 14 0v7a1.78 1.78 0 0 1 -3.1 1.4a1.65 1.65 0 0 0 -2.6 0a1.65 1.65 0 0 1 -2.6 0a1.65 1.65 0 0 0 -2.6 0a1.78 1.78 0 0 1 -3.1 -1.4v-7" />
@@ -627,7 +626,7 @@
                                           Icons
                                       </span>
                                   </a>
-                              </li>
+                              </li> -->
                               <li class="nav-item dropdown">
                                   <a class="nav-link dropdown-toggle" href="#navbar-help" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false">
                                       <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -667,6 +666,21 @@
                                   </div>
                               </li>
                           </ul>
+                      </div>
+                      <!-- NAVBAR - SEARCH-->
+                      <div class="col-lg-4 my-2 my-md-0 flex-grow-1 flex-md-grow  order-md-last pe-4">
+                          <form action="./" method="get" autocomplete="off" novalidate>
+                              <div class="input-icon">
+                                  <span class="input-icon-addon">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                          <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                                          <path d="M21 21l-6 -6" />
+                                      </svg>
+                                  </span>
+                                  <input style="font-size:medium;" type="text" value="" class="form-control" placeholder="Search…" aria-label="Search in website">
+                              </div>
+                          </form>
                       </div>
                   </div>
               </div>
