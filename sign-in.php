@@ -1,12 +1,5 @@
 <!doctype html>
-<!--
-* Tabler - Premium and Open Source dashboard template with responsive and high quality UI.
-* @version 1.0.0-beta19
-* @link https://tabler.io
-* Copyright 2018-2023 The Tabler Authors
-* Copyright 2018-2023 codecalm.net Paweł Kuna
-* Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
--->
+
 <html lang="en">
 
 <head>
@@ -110,12 +103,9 @@
                     <a href="./sign-up.php" tabindex="-1">Sign up</a>
                 </div>
             </div>
-
-
-
         </div>
     </div>
-
+    <!-- Facebook -->
     <script>
         window.fbAsyncInit = function() {
             FB.init({
@@ -150,10 +140,13 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
 
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-
+    <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+
+    <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Toggle  JS -->
@@ -188,6 +181,9 @@
         });
     </script>
 
+    <!-- Google -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
     <script>
         window.handleCredentialResponse = (response) => {
             // decodeJwtResponse() is a custom function defined by you
@@ -210,7 +206,6 @@
             // sessionStorage.setItem("email", responsePayload.email);
             // sessionStorage.setItem("userid", responsePayload.sub);
             // sessionStorage.setItem("userpicture", responsePayload.picture)
-
 
             setTimeout(function() {
                 // if (referrer != null) {
