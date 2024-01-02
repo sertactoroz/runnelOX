@@ -738,7 +738,7 @@
                 <path d="M21 21l-6 -6" />
               </svg>
             </span>
-            <input style="font-size:medium;   background-color: rgba(51, 51, 51, 0.3);" type="text" value="" class="form-control" placeholder="Search…" aria-label="Search in website">
+            <input style="font-size:medium;   background-color: rgba(24, 36, 51, 0.3);" type="text" value="" class="form-control" placeholder="Search…" aria-label="Search in website">
           </div>
         </form>
       </div>
