@@ -436,7 +436,7 @@
                                    <a class="dropdown-item" href="./activity.html">
                                        Activity
                                    </a>
-                                   <a class="dropdown-item" href="./gallery.html">
+                                   <a class="dropdown-item" href="index.php?p=gallery">
                                        Gallery
                                    </a>
                                    <a class="dropdown-item" href="./invoice.html">
@@ -525,43 +525,9 @@
                        </a>
                        <div class="dropdown-menu show">
                            <div class="dropdown-menu-columns">
+
                                <div class="dropdown-menu-column">
-                                   <a class="dropdown-item" href="./layout-horizontal.html">
-                                       Horizontal
-                                   </a>
-                                   <a class="dropdown-item" href="./layout-boxed.html">
-                                       Boxed
-                                       <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
-                                   </a>
-                                   <a class="dropdown-item" href="./layout-vertical.html">
-                                       Vertical
-                                   </a>
-                                   <a class="dropdown-item" href="./layout-vertical-transparent.html">
-                                       Vertical transparent
-                                   </a>
-                                   <a class="dropdown-item" href="./layout-vertical-right.html">
-                                       Right vertical
-                                   </a>
-                                   <a class="dropdown-item" href="./layout-condensed.html">
-                                       Condensed
-                                   </a>
-                                   <a class="dropdown-item" href="./layout-combo.html">
-                                       Combined
-                                   </a>
-                               </div>
-                               <div class="dropdown-menu-column">
-                                   <a class="dropdown-item" href="./layout-navbar-dark.html">
-                                       Navbar dark
-                                   </a>
-                                   <a class="dropdown-item" href="./layout-navbar-sticky.html">
-                                       Navbar sticky
-                                   </a>
-                                   <a class="dropdown-item" href="./layout-navbar-overlap.html">
-                                       Navbar overlap
-                                   </a>
-                                   <a class="dropdown-item" href="./layout-rtl.html">
-                                       RTL mode
-                                   </a>
+
                                    <a class="dropdown-item" href="./layout-fluid.html">
                                        Fluid
                                    </a>

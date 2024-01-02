@@ -21,7 +21,8 @@ include('screens/_head.php');
 
             <?php
             include('screens/' . $pagename . 'pageheader.php');
-            // Page body
+            // Page body 
+
             include('screens/' . $pagename . '.php');
             //  FOOTER
             include('screens/_footer.php'); ?>
