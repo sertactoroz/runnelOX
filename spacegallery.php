@@ -19,6 +19,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
   <link rel="stylesheet" href="css-rob/main.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css-rob/custom.css" type="text/css" media="all" />
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -33,7 +34,7 @@
 <html>
 <!-- Navbar -->
 <div class="sticky-top">
-  <header class="navbar navbar-expand-md sticky-top d-print-none" data-bs-theme="dark">
+  <header class="navbar navbar-expand-md sticky-top d-print-none" data-bs-theme="dark" style=" background-color: rgba(24, 36, 51, 0.8); border-radius: 0 0 20px 20px">
     <div class="container-xl py-1" style="z-index: 9999;">
       <!-- NAVBAR - TOGGLER-->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -662,10 +663,6 @@
       -ms-transition: .3s ease;
       transition: .3s ease;
     }
-
-
-
-    }
   </style>
 
 
@@ -726,28 +723,44 @@
   <script src="js-rob/bootstrap.min.js"></script>
 
 </body>
-<header class="navbar-expand-md" data-bs-theme="dark" style="z-index: 111" ;>
+<header id="bottom-search-bar" class="navbar-expand-md" data-bs-theme="dark" style="z-index: 111; display:none; background: none" ;>
   <div class="collapse navbar-collapse" id="navbar-menu">
-    <div class="navbar">
-      <div class="container-xl">
-        <!-- NAVBAR - SEARCH-->
-        <div class="my-2 my-md-0 flex-grow-1 flex-md-grow ">
-          <form action="./" method="get" autocomplete="off" novalidate>
-            <div class="input-icon">
-              <span class="input-icon-addon">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
-                  <path d="M21 21l-6 -6" />
-                </svg>
-              </span>
-              <input style="font-size:medium;" type="text" value="" class="form-control" placeholder="Search…" aria-label="Search in website">
-            </div>
-          </form>
-        </div>
+
+    <div class="container-xl pb-6" id="bottom-search-bar-inner">
+      <!-- NAVBAR - SEARCH-->
+      <div class="my-2 my-md-0 flex-grow-1 flex-md-grow ">
+        <form action="./" method="get" autocomplete="off" novalidate>
+          <div class="input-icon">
+            <span class="input-icon-addon">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                <path d="M21 21l-6 -6" />
+              </svg>
+            </span>
+            <input style="font-size:medium;   background-color: rgba(51, 51, 51, 0.3);" type="text" value="" class="form-control" placeholder="Search…" aria-label="Search in website">
+          </div>
+        </form>
       </div>
     </div>
+
   </div>
 </header>
+<script>
+  // Get the bottom container element
+  var bottomSearchBar = document.getElementById('bottom-search-bar');
+
+  // Add a mousemove event listener to the document
+  document.addEventListener('mousemove', function(event) {
+    // Check if the mouse is near the bottom of the page
+    if (event.clientY >= window.innerHeight - 100) {
+      // Show the bottom container
+      bottomSearchBar.style.display = 'block';
+    } else {
+      // Hide the bottom container
+      bottomSearchBar.style.display = 'none';
+    }
+  });
+</script>
 
 </html>

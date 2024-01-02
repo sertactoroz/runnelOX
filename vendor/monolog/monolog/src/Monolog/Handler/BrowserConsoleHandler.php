@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * This file is part of the Monolog package.
@@ -285,7 +287,7 @@ class BrowserConsoleHandler extends AbstractProcessingHandler
     {
         $method = array_shift($args);
         if (!is_string($method)) {
-            throw new \UnexpectedValueException('Expected the first arg to be a string, got: '.var_export($method, true));
+            throw new \UnexpectedValueException('Expected the first arg to be a string, got: ' . var_export($method, true));
         }
 
         return self::call_array($method, $args);
